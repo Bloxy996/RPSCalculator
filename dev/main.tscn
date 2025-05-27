@@ -1,0 +1,649 @@
+[gd_scene load_steps=16 format=3 uid="uid://mpq0iue01wwf"]
+
+[ext_resource type="Script" uid="uid://bo00kssn81tsy" path="res://main.gd" id="1_wvup2"]
+[ext_resource type="FontFile" uid="uid://cereifogjbdqy" path="res://Nunito-VariableFont_wght.ttf" id="2_esh6t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0.08469, 0.0846899, 0.0846899, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o7tc8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j12r2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h85u5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3onhu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vol3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoaj"]
+bg_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyscb"]
+bg_color = Color(0.08469, 0.0846899, 0.0846899, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhvvo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8078k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6kr0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjrvf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdrwj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvup2")
+
+[node name="Backround" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Splitter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 192.0
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RockPaperScissorShoe" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="RPSHpanel" type="Panel" parent="RockPaperScissorShoe"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -449.0
+offset_right = 232.0
+offset_bottom = -386.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="rock" type="Button" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -354.0
+offset_right = 321.0
+offset_bottom = -282.0
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7tc8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j12r2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h85u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3onhu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1vol3")
+text = "Rock"
+alignment = 0
+
+[node name="paper" type="Button" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -282.0
+offset_right = 321.0
+offset_bottom = -210.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7tc8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j12r2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h85u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3onhu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1vol3")
+text = "Paper"
+alignment = 0
+
+[node name="scissor" type="Button" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -210.0
+offset_right = 320.0
+offset_bottom = -138.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7tc8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j12r2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h85u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3onhu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1vol3")
+text = "Scissor"
+alignment = 0
+
+[node name="opponentmove" type="RichTextLabel" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -266.0
+offset_top = -181.0
+offset_right = -42.0
+offset_bottom = -117.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoaj")
+bbcode_enabled = true
+text = "[right] [/right]"
+
+[node name="helper" type="RichTextLabel" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 85.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Your turn"
+
+[node name="won" type="RichTextLabel" parent="RockPaperScissorShoe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -338.0
+offset_top = -229.0
+offset_right = -41.0
+offset_bottom = -189.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[right]"
+
+[node name="MaxHandNum" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -410.0
+offset_top = 144.0
+offset_right = -42.0
+offset_bottom = 277.0
+grow_horizontal = 0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[right]Max Num: 0"
+
+[node name="wins" type="RichTextLabel" parent="MaxHandNum"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = 353.0
+offset_bottom = 138.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[right]Player wins: 0
+Opponent wins: 0"
+
+[node name="hands" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CALCpanel" type="Panel" parent="hands"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 156.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cyscb")
+
+[node name="PL" type="RichTextLabel" parent="hands"]
+layout_mode = 0
+offset_left = -233.0
+offset_top = -177.0
+offset_right = -103.0
+offset_bottom = -30.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]1"
+
+[node name="OR" type="RichTextLabel" parent="hands"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = -177.0
+offset_right = 256.0
+offset_bottom = -30.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]1"
+
+[node name="PR" type="RichTextLabel" parent="hands"]
+layout_mode = 0
+offset_left = -233.0
+offset_top = 50.0
+offset_right = -103.0
+offset_bottom = 197.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]1"
+
+[node name="OL" type="RichTextLabel" parent="hands"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 47.0
+offset_right = 256.0
+offset_bottom = 194.0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]1"
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OpponentLeft" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 33.0
+offset_right = 269.0
+offset_bottom = 206.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lhvvo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8078k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y6kr0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sjrvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cdrwj")
+
+[node name="PlayerRight" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = -241.0
+offset_top = 39.0
+offset_right = -85.0
+offset_bottom = 212.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lhvvo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8078k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y6kr0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sjrvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cdrwj")
+
+[node name="OpponentRight" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = -193.0
+offset_right = 267.0
+offset_bottom = -20.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lhvvo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8078k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y6kr0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sjrvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cdrwj")
+
+[node name="PlayerLeft" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = -249.0
+offset_top = -193.0
+offset_right = -93.0
+offset_bottom = -20.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lhvvo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8078k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y6kr0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sjrvf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cdrwj")
+
+[node name="Intro" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 24.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[center]Welcome to rock paper scissors calculator!"
+
+[node name="Player" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -261.0
+offset_top = -98.0
+offset_right = -101.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 50
+text = "Player"
+
+[node name="Opponent" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -98.0
+offset_right = 323.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_esh6t")
+theme_override_font_sizes/normal_font_size = 50
+text = "Opponent"
+
+[node name="bump" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 41.0
+offset_top = 200.0
+offset_right = 186.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7tc8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j12r2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h85u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3onhu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1vol3")
+text = "BUMP!"
+alignment = 0
+
+[node name="restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -82.0
+offset_right = 189.0
+offset_bottom = -33.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7tc8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j12r2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h85u5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3onhu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1vol3")
+text = "RESTART"
+alignment = 0
+
+[node name="keypad" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -133.0
+offset_right = -46.0
+offset_bottom = 183.0
+grow_horizontal = 0
+grow_vertical = 2
+columns = 2
+
+[node name="0" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "0"
+
+[node name="1" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "1"
+
+[node name="2" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "2"
+
+[node name="3" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "3"
+
+[node name="4" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "4"
+
+[node name="5" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "5"
+
+[node name="6" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "6"
+
+[node name="7" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "7"
+
+[node name="8" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "8"
+
+[node name="9" type="Button" parent="keypad"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_esh6t")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cyscb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyscb")
+text = "9"
+
+[connection signal="pressed" from="RockPaperScissorShoe/rock" to="." method="_on_rock_pressed"]
+[connection signal="pressed" from="RockPaperScissorShoe/paper" to="." method="_on_paper_pressed"]
+[connection signal="pressed" from="RockPaperScissorShoe/scissor" to="." method="_on_scissor_pressed"]
+[connection signal="pressed" from="buttons/OpponentLeft" to="." method="_on_opponent_left_pressed"]
+[connection signal="pressed" from="buttons/PlayerRight" to="." method="_on_player_right_pressed"]
+[connection signal="pressed" from="buttons/OpponentRight" to="." method="_on_opponent_right_pressed"]
+[connection signal="pressed" from="buttons/PlayerLeft" to="." method="_on_player_left_pressed"]
+[connection signal="pressed" from="bump" to="." method="_on_bump_pressed"]
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
